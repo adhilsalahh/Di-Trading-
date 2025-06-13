@@ -29,7 +29,7 @@ const About = () => {
                     <div className="prose prose-lg max-w-none">
                       <p className="text-lg text-gray-700 leading-relaxed mb-6">
                         Established with a vision to provide comprehensive trading and supply solutions, 
-                        <strong className="text-blue-600"> DI Trading Company</strong> has grown to become a trusted 
+                        <strong className="text-blue-600"> Distinguished Innovations  Trading Company</strong> has grown to become a trusted 
                         name in the industry. We specialize in trading and supplying high-quality electrical equipment, 
                         plumbing solutions, and industrial supplies to businesses across various sectors.
                       </p>
