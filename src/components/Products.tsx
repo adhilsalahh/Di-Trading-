@@ -75,7 +75,7 @@ const Products = () => {
             <span className="bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent"> Categories</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Comprehensive range of electrical equipment and industrial supplies to meet all your project requirements
+            Comprehensive range of products we trade and supply to meet all your project requirements
           </p>
         </div>
 
@@ -135,13 +135,13 @@ const Products = () => {
         {/* CTA Section */}
         <div className="mt-16 text-center">
           <div className="bg-gradient-to-r from-blue-600 to-cyan-600 rounded-2xl p-8 text-white">
-            <h3 className="text-2xl font-bold mb-4">Need Custom Solutions?</h3>
+            <h3 className="text-2xl font-bold mb-4">Need Bulk Supply Solutions?</h3>
             <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
-              Our expert team can help you find the perfect electrical equipment and supplies for your specific requirements.
+              Our expert trading team can help you find the perfect products and arrange bulk supply for your specific requirements.
             </p>
             <button className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold 
               transition-all duration-300 hover:shadow-lg">
-              Get Expert Consultation
+              Get Trading Consultation
             </button>
           </div>
         </div>

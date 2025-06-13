@@ -1,5 +1,5 @@
 import React from 'react';
-import { Zap, MapPin, Phone, Mail, Clock, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
+import { Package, MapPin, Phone, Mail, Clock, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
 
 const Footer = () => {
   const productCategories = [
@@ -14,7 +14,7 @@ const Footer = () => {
   const quickLinks = [
     'About Us',
     'Our Products',
-    'Services',
+    'Trading Services',
     'Contact Us',
     'Careers',
     'Support'
@@ -29,7 +29,7 @@ const Footer = () => {
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-2 mb-6">
               <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-700 rounded-lg flex items-center justify-center">
-                <Zap className="w-7 h-7 text-white" />
+                <Package className="w-7 h-7 text-white" />
               </div>
               <div>
                 <span className="text-2xl font-bold">DI</span>
@@ -37,8 +37,8 @@ const Footer = () => {
               </div>
             </div>
             <p className="text-gray-300 mb-6 leading-relaxed">
-              Your trusted partner for comprehensive electrical equipment, industrial supplies, 
-              and professional solutions. Powering businesses with quality and reliability.
+              Your trusted partner for comprehensive trading and supply of electrical equipment, industrial supplies, 
+              and professional products. Serving businesses with quality and reliability.
             </p>
             
             {/* Social Links */}

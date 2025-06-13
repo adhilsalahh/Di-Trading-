@@ -1,14 +1,18 @@
 import React, { useState, useEffect } from 'react';
-import { ArrowRight, Zap, ShieldCheck, Award } from 'lucide-react';
+import { ArrowRight, Package, ShieldCheck, Award } from 'lucide-react';
 
 const Hero = () => {
   const heroImages = [
-    'https://images.pexels.com/photos/162553/keys-workshop-mechanic-tools-162553.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1280',
-    'https://images.pexels.com/photos/257736/pexels-photo-257736.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1280',
-    'https://images.pexels.com/photos/186461/pexels-photo-186461.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1280',
-    'https://images.pexels.com/photos/159298/gears-cogs-machine-machinery-159298.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1280',
-    'https://images.pexels.com/photos/1108101/pexels-photo-1108101.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1280',
-    'https://images.pexels.com/photos/1108572/pexels-photo-1108572.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1280'
+    'https://images.pexels.com/photos/257736/pexels-photo-257736.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1280', // Electrical wires and cables
+    'https://images.pexels.com/photos/5691659/pexels-photo-5691659.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1280', // LED lights and lighting products
+    'https://images.pexels.com/photos/162553/keys-workshop-mechanic-tools-162553.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1280', // Power tools and hand tools
+    'https://images.pexels.com/photos/4792509/pexels-photo-4792509.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1280', // Electrical outlets and switches
+    'https://images.pexels.com/photos/1108572/pexels-photo-1108572.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1280', // Electrical panel and control equipment
+    'https://images.pexels.com/photos/5691660/pexels-photo-5691660.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1280', // Modern electrical equipment
+    'https://images.pexels.com/photos/5691658/pexels-photo-5691658.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1280', // Electrical installation materials
+    'https://images.pexels.com/photos/1108101/pexels-photo-1108101.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1280', // Industrial electrical components
+    'https://images.pexels.com/photos/186461/pexels-photo-186461.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1280', // Safety equipment and fire tools
+    'https://images.pexels.com/photos/5691661/pexels-photo-5691661.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1280' // Cable management and wiring
   ];
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -47,22 +51,22 @@ const Hero = () => {
           {/* Content */}
           <div className="text-white">
             <div className="flex items-center space-x-2 mb-6">
-              <Zap className="w-8 h-8 text-cyan-400" />
-              <span className="text-cyan-400 font-semibold text-lg">Powering Your Projects</span>
+              <Package className="w-8 h-8 text-cyan-400" />
+              <span className="text-cyan-400 font-semibold text-lg">Trading & Supply Excellence</span>
             </div>
             
             <h1 className="text-5xl lg:text-6xl font-bold mb-6 leading-tight">
               Premium
               <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent block">
-                Electrical Solutions
+                Trading & Supply
               </span>
-              for Every Need
+              for Every Industry
             </h1>
             
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
               DI Trading Company is your trusted partner for comprehensive electrical equipment, 
-              plumbing solutions, and industrial supplies. With years of expertise and commitment 
-              to quality, we power businesses across industries.
+              plumbing solutions, and industrial supplies. With years of expertise in trading and 
+              supply chain management, we serve businesses across various industries.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 mb-12">
@@ -81,8 +85,8 @@ const Hero = () => {
               <div className="flex items-center space-x-3">
                 <ShieldCheck className="w-8 h-8 text-green-400" />
                 <div>
-                  <p className="font-semibold">Quality Assured</p>
-                  <p className="text-sm text-gray-400">Certified Products</p>
+                  <p className="font-semibold">Quality Products</p>
+                  <p className="text-sm text-gray-400">Certified Supplies</p>
                 </div>
               </div>
               
@@ -90,15 +94,15 @@ const Hero = () => {
                 <Award className="w-8 h-8 text-yellow-400" />
                 <div>
                   <p className="font-semibold">15+ Years</p>
-                  <p className="text-sm text-gray-400">Industry Experience</p>
+                  <p className="text-sm text-gray-400">Trading Experience</p>
                 </div>
               </div>
               
               <div className="flex items-center space-x-3">
-                <Zap className="w-8 h-8 text-cyan-400" />
+                <Package className="w-8 h-8 text-cyan-400" />
                 <div>
-                  <p className="font-semibold">24/7 Support</p>
-                  <p className="text-sm text-gray-400">Expert Assistance</p>
+                  <p className="font-semibold">Fast Delivery</p>
+                  <p className="text-sm text-gray-400">Reliable Supply</p>
                 </div>
               </div>
             </div>
@@ -110,12 +114,12 @@ const Hero = () => {
               <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 shadow-2xl">
                 <img 
                   src={heroImages[(currentImageIndex + 1) % heroImages.length]}
-                  alt="Electrical Equipment"
+                  alt="Electrical Products - Wires, Cables, Lights & Tools"
                   className="w-full h-64 object-cover rounded-lg mb-6 transition-all duration-1000"
                 />
                 <div className="text-center">
-                  <h3 className="text-xl font-bold text-white mb-2">Professional Grade Equipment</h3>
-                  <p className="text-gray-300">From basic electrical components to advanced industrial solutions</p>
+                  <h3 className="text-xl font-bold text-white mb-2">Wide Range of Products</h3>
+                  <p className="text-gray-300">Wires, cables, lights, tools & safety equipment</p>
                 </div>
               </div>
             </div>

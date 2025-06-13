@@ -1,11 +1,11 @@
 import React from 'react';
-import { Users, Award, Clock, MapPin } from 'lucide-react';
+import { Users, Award, Truck, MapPin } from 'lucide-react';
 
 const Stats = () => {
   const stats = [
     { icon: Users, value: '500+', label: 'Happy Clients', color: 'text-cyan-600', bgColor: 'bg-cyan-50' },
     { icon: Award, value: '15+', label: 'Years Experience', color: 'text-blue-600', bgColor: 'bg-blue-50' },
-    { icon: Clock, value: '24/7', label: 'Support Available', color: 'text-green-600', bgColor: 'bg-green-50' },
+    { icon: Truck, value: 'Fast', label: 'Delivery Service', color: 'text-green-600', bgColor: 'bg-green-50' },
     { icon: MapPin, value: '10+', label: 'Cities Served', color: 'text-orange-600', bgColor: 'bg-orange-50' }
   ];
 

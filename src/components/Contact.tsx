@@ -68,7 +68,7 @@ This inquiry was submitted through the DI Trading Company website contact form.
     {
       icon: MapPin,
       title: 'Visit Our Office',
-      details: ['CR 4030246522', 'Jeddah 45155', 'PO Box: 52145'],
+      details: ['Jeddah 45155', 'PO Box: 52145'],
       color: 'text-blue-600',
       bgColor: 'bg-blue-50'
     },
