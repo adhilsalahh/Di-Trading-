@@ -1,148 +1,192 @@
 import React from 'react';
-import { Zap, Wrench, Lightbulb, FileText, Shield, Wind } from 'lucide-react';
+import { Zap, Wrench, Shield, Cog, Wind, Package } from 'lucide-react';
 
 const Products = () => {
   const categories = [
     {
       icon: Zap,
-      title: 'Electrical & Plumbing Engineering',
-      subtitle: 'Electro Mechanical Consumables',
-      description: 'Complete range of electrical components, wiring accessories, and plumbing solutions for industrial and commercial applications.',
-      items: ['Cables & Wires', 'Switches & Sockets', 'MCBs & RCCBs', 'Pipes & Fittings'],
-      color: 'from-blue-500 to-blue-600',
-      bgColor: 'bg-blue-50',
-      hoverColor: 'hover:bg-blue-100'
+      title: 'Electrical ',
+      subtitle: 'Electro-Mechanical Consumables',
+      description: 'Comprehensive range of electrical components and systems for residential, commercial, and industrial applications.',
+      items: [
+        'Cables & Wiring ',
+        'Switches & industrial  socketes',
+        'Load Centers & Circuit Breakers',
+        'Lighting Solutions',
+        'Tools And Equipments',
+        'Conduits & Accessories'
+      ],
+      image: 'https://images.pexels.com/photos/257736/pexels-photo-257736.jpeg?auto=compress&cs=tinysrgb&w=800&h=600',
+      color: 'rose-700'
     },
     {
-      icon: Lightbulb,
-      title: 'Lightning Products',
-      subtitle: 'Illumination Solutions',
-      description: 'Energy-efficient lighting solutions including LED fixtures, street lights, and specialized industrial lighting systems.',
-      items: ['LED Lights', 'Street Lighting', 'Industrial Fixtures', 'Emergency Lights'],
-      color: 'from-yellow-500 to-orange-500',
-      bgColor: 'bg-yellow-50',
-      hoverColor: 'hover:bg-yellow-100'
-    },
-    {
-      icon: FileText,
-      title: 'Office Stationery',
-      subtitle: 'Business Essentials',
-      description: 'Complete office supplies and stationery items to keep your business operations running smoothly.',
-      items: ['Paper Products', 'Writing Instruments', 'Filing Solutions', 'Office Accessories'],
-      color: 'from-green-500 to-green-600',
-      bgColor: 'bg-green-50',
-      hoverColor: 'hover:bg-green-100'
+      icon: Cog,
+      title: 'Mechanical ',
+      subtitle: 'Precision Components & Industrial Solutions',
+      description: 'High-quality mechanical components and systems for industrial machinery and equipment.',
+      items: [
+        'Valves',
+        'Steel Flanges & Fittings',
+        'Equipment',
+        'Systems and Devices',
+        'Motors and Generators',
+        
+      ],
+      image: 'https://images.pexels.com/photos/159298/gears-cogs-machine-machinery-159298.jpeg?auto=compress&cs=tinysrgb&w=800&h=600',
+      color: 'blue-600'
     },
     {
       icon: Shield,
-      title: 'Safety & Power Tools',
-      subtitle: 'Protection & Equipment',
-      description: 'Professional safety equipment and high-quality power tools for construction and industrial applications.',
-      items: ['Safety Gear', 'Power Drills', 'Hand Tools', 'Measuring Instruments'],
-      color: 'from-red-500 to-red-600',
-      bgColor: 'bg-red-50',
-      hoverColor: 'hover:bg-red-100'
+      title: 'Safety and Power Tools',
+      subtitle: 'Reliable Tools & Safety Systems for Every Jobsite',
+      description: 'Complete safety equipment and fire protection systems to ensure workplace security and compliance.',
+      items: [
+        'Fire Fighting &  Fire Alarm Systems',
+       
+        'Safety Equipmentt',
+        'Power Tools',
+        'Hand Tools',
+        'Welding Equipment'
+      ],
+      image: 'https://images.pexels.com/photos/416978/pexels-photo-416978.jpeg?auto=compress&cs=tinysrgb&w=800&h=600',
+      color: 'green-600'
     },
+   
+    {icon: Package,
+  title: 'Industrial Supplies',
+  subtitle: 'Powering Productivity with Advanced Industrial Solutions',
+  description: 'High-performance industrial components and systems designed to enhance efficiency, automation, and heavy-duty operations.',
+  items: [
+    'Control Panels',
+    'Motors & Drives',
+    'Automation Components',
+    'Lifting Equipment'
+  ],
+  image: 'https://images.pexels.com/photos/256369/pexels-photo-256369.jpeg?auto=compress&cs=tinysrgb&w=800&h=600',
+  color: 'blue-700'
+},
+
+
+    
+    
     {
       icon: Wind,
-      title: 'HVAC Solutions',
-      subtitle: 'Climate Control Systems',
-      description: 'Heating, ventilation, and air conditioning systems and components for optimal climate control.',
-      items: ['Air Conditioners', 'Ventilation Fans', 'Ductwork', 'Control Systems'],
-      color: 'from-cyan-500 to-cyan-600',
-      bgColor: 'bg-cyan-50',
-      hoverColor: 'hover:bg-cyan-100'
+      title: 'HVAC Systems',
+      subtitle: 'Climate Control Solutions',
+      description: 'Complete heating, ventilation, and air conditioning systems for optimal indoor climate control.',
+      items: [
+        'Air Conditioning ',
+        'Ventilation Systems',
+        'Ductwork ',
+        'Controls Systems',
+    
+      ],
+      image: 'https://images.pexels.com/photos/8092/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=800&h=600',
+      color: 'cyan-600'
     },
+
     {
       icon: Wrench,
-      title: 'Industrial Equipment',
-      subtitle: 'Heavy-Duty Solutions',
-      description: 'Specialized industrial equipment and machinery components for manufacturing and production facilities.',
-      items: ['Motors & Drives', 'Control Panels', 'Automation Components', 'Industrial Supplies'],
-      color: 'from-purple-500 to-purple-600',
-      bgColor: 'bg-purple-50',
-      hoverColor: 'hover:bg-purple-100'
-    }
+      title: 'General Supplies',
+      subtitle: 'Everyday Essentials for Business Operations',
+      description: 'Essential tools, supplies, and consumables for smooth operations across offices, workshops, and industrial environments.'
+,
+      items: [
+        'Specialized Supplies',
+        'IT Goods and Services',
+        'Office & Stationery Supplies',
+        'Consumable Items',
+      ],
+      image: 'https://images.pexels.com/photos/162553/keys-workshop-mechanic-tools-162553.jpeg?auto=compress&cs=tinysrgb&w=800&h=600',
+      color: 'orange-600'
+    },
+   
   ];
 
   return (
-    <section id="products" className="py-20 bg-gray-50">
+    <section id="products" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Our Product
-            <span className="bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent"> Categories</span>
+          <h2 className="text-4xl font-bold text-rose-700 mb-4">
+            Our Product Categories
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Comprehensive range of products we trade and supply to meet all your project requirements
+            Comprehensive range of high-quality products we trade and supply to meet all your industrial and commercial requirements
           </p>
         </div>
 
         {/* Categories Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-8">
           {categories.map((category, index) => {
             const IconComponent = category.icon;
             return (
               <div
                 key={index}
-                className={`group relative bg-white rounded-2xl p-8 shadow-lg ${category.hoverColor} 
-                  transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 cursor-pointer border border-gray-100`}
+                className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100 overflow-hidden"
               >
-                {/* Background Gradient */}
-                <div className={`absolute inset-0 bg-gradient-to-br ${category.color} opacity-0 
-                  group-hover:opacity-5 rounded-2xl transition-opacity duration-500`}></div>
-                
-                {/* Icon */}
-                <div className={`relative mb-6 inline-flex p-4 rounded-xl bg-gradient-to-br ${category.color} shadow-lg`}>
-                  <IconComponent className="w-8 h-8 text-white" />
+                {/* Image */}
+                <div className="relative h-48 overflow-hidden">
+                  <img 
+                    src={category.image}
+                    alt={category.title}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                  
+                  {/* Icon Overlay */}
+                  <div className={`absolute top-4 right-4 p-3 bg-${category.color} rounded-lg shadow-lg`}>
+                    <IconComponent className="w-6 h-6 text-white" />
+                  </div>
                 </div>
                 
                 {/* Content */}
-                <div className="relative">
-                  <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-900 transition-colors duration-300">
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-rose-700 mb-2">
                     {category.title}
                   </h3>
-                  <p className="text-sm font-medium text-blue-600 mb-4">{category.subtitle}</p>
-                  <p className="text-gray-600 mb-6 leading-relaxed">{category.description}</p>
+                  <p className={`text-sm font-medium text-${category.color} mb-3`}>
+                    {category.subtitle}
+                  </p>
+                  <p className="text-gray-600 mb-4 leading-relaxed text-sm">
+                    {category.description}
+                  </p>
                   
                   {/* Product Items */}
                   <div className="space-y-2 mb-6">
                     {category.items.map((item, itemIndex) => (
                       <div key={itemIndex} className="flex items-center space-x-2">
-                        <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
+                        <div className={`w-2 h-2 bg-${category.color} rounded-full`}></div>
                         <span className="text-sm text-gray-700">{item}</span>
                       </div>
                     ))}
                   </div>
                   
                   {/* View More Button */}
-                  <button className="text-blue-600 hover:text-blue-800 font-semibold text-sm 
-                    group-hover:underline transition-colors duration-300">
-                    View All Products →
+                  <button className={`w-full bg-${category.color} hover:bg-${category.color}/90 text-white py-3 px-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105`}>
+                    View Products
                   </button>
                 </div>
-                
-                {/* Hover Effect Border */}
-                <div className={`absolute inset-0 rounded-2xl border-2 border-transparent 
-                  group-hover:border-gradient-to-br group-hover:${category.color.replace('to-', 'via-')} 
-                  transition-all duration-500 opacity-0 group-hover:opacity-100`}></div>
               </div>
             );
           })}
         </div>
 
         {/* CTA Section */}
-        <div className="mt-16 text-center">
-          <div className="bg-gradient-to-r from-blue-600 to-cyan-600 rounded-2xl p-8 text-white">
-            <h3 className="text-2xl font-bold mb-4">Need Bulk Supply Solutions?</h3>
-            <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
-              Our expert trading team can help you find the perfect products and arrange bulk supply for your specific requirements.
+        <div className="mt-16">
+          <div className="bg-gradient-to-r from-rose-700 to-rose-800 rounded-2xl p-8 text-white text-center">
+            <h3 className="text-3xl font-bold mb-4">Need Custom Solutions?</h3>
+            <p className="text-rose-100 mb-6 max-w-2xl mx-auto text-lg">
+              Our expert team can help you find the perfect products and arrange bulk supply solutions tailored to your specific requirements.
             </p>
-            <button className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold 
-              transition-all duration-300 hover:shadow-lg">
-              Get Trading Consultation
-            </button>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-white text-rose-700 hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold transition-all duration-300 hover:shadow-lg">
+                Request Quote
+              </button>
+              <button className="border-2 border-white hover:bg-white hover:text-rose-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300">
+                Contact Sales Team
+              </button>
+            </div>
           </div>
         </div>
       </div>

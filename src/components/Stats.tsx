@@ -3,7 +3,7 @@ import { Users, Award, Truck, MapPin } from 'lucide-react';
 
 const Stats = () => {
   const stats = [
-    { icon: Users, value: '500+', label: 'Happy Clients', color: 'text-cyan-600', bgColor: 'bg-cyan-50' },
+    { icon: Users, value: '500+', label: 'Happy Clients', color: 'text-rose-700', bgColor: 'bg-rose-50' },
     { icon: Award, value: '15+', label: 'Years Experience', color: 'text-blue-600', bgColor: 'bg-blue-50' },
     { icon: Truck, value: 'Fast', label: 'Delivery Service', color: 'text-green-600', bgColor: 'bg-green-50' },
     { icon: MapPin, value: '10+', label: 'Cities Served', color: 'text-orange-600', bgColor: 'bg-orange-50' }
@@ -21,7 +21,7 @@ const Stats = () => {
                   group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
                   <IconComponent className="w-8 h-8" />
                 </div>
-                <h3 className="text-3xl font-bold text-gray-900 mb-2">{stat.value}</h3>
+                <h3 className="text-3xl font-bold text-rose-700 mb-2">{stat.value}</h3>
                 <p className="text-gray-600 font-medium">{stat.label}</p>
               </div>
             );

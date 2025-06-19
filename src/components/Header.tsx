@@ -29,16 +29,27 @@ const Header = () => {
           {/* Logo */}
           <div className="flex items-center space-x-3">
             <div className="relative">
-              <div className="w-12 h-12 bg-gradient-to-br from-cyan-400 to-blue-600 rounded-xl flex items-center justify-center shadow-lg transform hover:scale-105 transition-transform duration-300">
+              <div className="w-12 h-12 bg-gradient-to-br from-rose-600 to-rose-800 rounded-xl flex items-center justify-center shadow-lg transform hover:scale-105 transition-transform duration-300">
                 <Zap className="w-7 h-7 text-white" />
               </div>
-              <div className="absolute -inset-1 bg-gradient-to-br from-cyan-400 to-blue-600 rounded-xl blur opacity-30 animate-pulse"></div>
+              <div className="absolute -inset-1 bg-gradient-to-br from-rose-600 to-rose-800 rounded-xl blur opacity-30 animate-pulse"></div>
             </div>
-            <div className="flex items-baseline space-x-1">
-              <span className="text-3xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
-                DI
-              </span>
-              <span className="text-xl font-medium text-white">Trading Company</span>
+            <div className="flex flex-col">
+              {/* English Name */}
+              <div className="flex items-baseline space-x-1">
+                <span className="text-2xl lg:text-3xl font-bold text-rose-700">
+                  Distinguished Innovations
+                </span>
+              </div>
+              <div className="flex items-baseline space-x-1">
+                <span className="text-lg lg:text-xl font-medium text-white">Trading Company</span>
+              </div>
+              {/* Arabic Name - Hidden on mobile, shown on larger screens */}
+              <div className="hidden md:block">
+                <span className="text-sm text-rose-400 font-medium" dir="rtl">
+                  شركة الابتكارات المتميزة للتجارة
+                </span>
+              </div>
             </div>
           </div>
 
@@ -51,12 +62,12 @@ const Header = () => {
                 className="relative px-6 py-3 text-gray-300 hover:text-white font-medium transition-all duration-300 group rounded-lg hover:bg-white/10"
               >
                 {item.name}
-                <span className="absolute bottom-1 left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-blue-400 transition-all duration-300 group-hover:w-8 rounded-full"></span>
+                <span className="absolute bottom-1 left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-rose-600 to-rose-800 transition-all duration-300 group-hover:w-8 rounded-full"></span>
               </a>
             ))}
             
             {/* CTA Button */}
-            <button className="ml-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-cyan-500/25 transform hover:scale-105">
+            <button className="ml-4 bg-gradient-to-r from-rose-600 to-rose-800 hover:from-rose-700 hover:to-rose-900 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-rose-700/25 transform hover:scale-105">
               Get Quote
             </button>
           </nav>
@@ -74,18 +85,25 @@ const Header = () => {
         <div className={`md:hidden transition-all duration-300 ${
           isMenuOpen ? 'max-h-80 opacity-100 mt-4' : 'max-h-0 opacity-0 overflow-hidden'
         }`}>
+          {/* Mobile Arabic Name - Centered */}
+          <div className="text-center mb-4 pb-4 border-b border-gray-700">
+            <span className="text-rose-400 font-medium text-sm" dir="rtl">
+              شركة الابتكارات المتميزة للتجارة
+            </span>
+          </div>
+          
           <nav className="flex flex-col space-y-2 pb-4">
             {navItems.map((item) => (
               <a
                 key={item.name}
                 href={item.href}
-                className="text-gray-300 hover:text-white hover:bg-white/10 px-4 py-3 rounded-lg transition-all duration-200"
+                className="text-gray-300 hover:text-white hover:bg-white/10 px-4 py-3 rounded-lg transition-all duration-200 text-center"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {item.name}
               </a>
             ))}
-            <button className="mt-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-3 rounded-lg font-semibold transition-all duration-300">
+            <button className="mt-2 bg-gradient-to-r from-rose-600 to-rose-800 text-white px-4 py-3 rounded-lg font-semibold transition-all duration-300 mx-4">
               Get Quote
             </button>
           </nav>

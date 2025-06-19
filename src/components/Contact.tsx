@@ -27,7 +27,6 @@ const Contact = () => {
     setSubmitStatus('');
 
     try {
-      // Create mailto link with form data
       const subject = encodeURIComponent(`Inquiry: ${formData.subject}`);
       const body = encodeURIComponent(`
 Name: ${formData.name}
@@ -40,12 +39,11 @@ Message:
 ${formData.message}
 
 ---
-This inquiry was submitted through the DI Trading Company website contact form.
+This inquiry was submitted through the Distinguished Innovations Trading Company website contact form.
       `);
       
       const mailtoLink = `mailto:n.rashid@di-trading.com?subject=${subject}&body=${body}`;
       
-      // Open email client
       window.location.href = mailtoLink;
       
       setSubmitStatus('success');
@@ -69,8 +67,8 @@ This inquiry was submitted through the DI Trading Company website contact form.
       icon: MapPin,
       title: 'Visit Our Office',
       details: ['Jeddah 45155', 'PO Box: 52145'],
-      color: 'text-blue-600',
-      bgColor: 'bg-blue-50'
+      color: 'text-rose-700',
+      bgColor: 'bg-rose-50'
     },
     {
       icon: Phone,
@@ -83,8 +81,8 @@ This inquiry was submitted through the DI Trading Company website contact form.
       icon: Mail,
       title: 'Email Us',
       details: ['n.rashid@di-trading.com', 'info@ditradingcompany.com'],
-      color: 'text-purple-600',
-      bgColor: 'bg-purple-50'
+      color: 'text-blue-600',
+      bgColor: 'bg-blue-50'
     },
     {
       icon: Clock,
@@ -107,13 +105,12 @@ This inquiry was submitted through the DI Trading Company website contact form.
   ];
 
   return (
-    <section id="contact" className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+    <section id="contact" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Get In
-            <span className="bg-gradient-to-r from-cyan-600 to-blue-600 bg-clip-text text-transparent"> Touch</span>
+          <h2 className="text-4xl font-bold text-rose-700 mb-4">
+            Get In Touch
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Ready to power your next project? Contact our expert team for personalized solutions and competitive quotes.
@@ -124,9 +121,9 @@ This inquiry was submitted through the DI Trading Company website contact form.
           {/* Contact Information */}
           <div className="lg:col-span-1 space-y-8">
             <div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Contact Information</h3>
+              <h3 className="text-2xl font-bold text-rose-700 mb-6">Contact Information</h3>
               <p className="text-gray-600 mb-8">
-                We're here to help you find the perfect electrical solutions for your needs. 
+                We're here to help you find the perfect solutions for your needs. 
                 Reach out to us through any of the following channels.
               </p>
             </div>
@@ -134,7 +131,7 @@ This inquiry was submitted through the DI Trading Company website contact form.
             {contactInfo.map((info, index) => {
               const IconComponent = info.icon;
               return (
-                <div key={index} className="flex items-start space-x-4 p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300">
+                <div key={index} className="flex items-start space-x-4 p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-100">
                   <div className={`p-3 rounded-lg ${info.bgColor} ${info.color}`}>
                     <IconComponent className="w-6 h-6" />
                   </div>
@@ -147,24 +144,13 @@ This inquiry was submitted through the DI Trading Company website contact form.
                 </div>
               );
             })}
-
-            {/* Map Placeholder */}
-            <div className="bg-white rounded-xl shadow-md overflow-hidden">
-              <div className="h-48 bg-gradient-to-br from-blue-100 to-cyan-100 flex items-center justify-center">
-                <div className="text-center">
-                  <MapPin className="w-12 h-12 text-blue-600 mx-auto mb-2" />
-                  <p className="text-gray-600 font-medium">Interactive Map</p>
-                  <p className="text-sm text-gray-500">Location: Kerala, India</p>
-                </div>
-              </div>
-            </div>
           </div>
 
           {/* Contact Form */}
           <div className="lg:col-span-2">
-            <div className="bg-white rounded-2xl shadow-xl p-8">
+            <div className="bg-white rounded-2xl shadow-xl p-8 border border-gray-100">
               <div className="mb-8">
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">Send Us an Inquiry</h3>
+                <h3 className="text-2xl font-bold text-rose-700 mb-2">Send Us an Inquiry</h3>
                 <p className="text-gray-600">
                   Fill out the form below and we'll get back to you within 24 hours.
                 </p>
@@ -186,7 +172,7 @@ This inquiry was submitted through the DI Trading Company website contact form.
                         value={formData.name}
                         onChange={handleInputChange}
                         required
-                        className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
+                        className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-rose-700 focus:border-transparent transition-all duration-300"
                         placeholder="Enter your full name"
                       />
                     </div>
@@ -205,7 +191,7 @@ This inquiry was submitted through the DI Trading Company website contact form.
                         value={formData.email}
                         onChange={handleInputChange}
                         required
-                        className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
+                        className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-rose-700 focus:border-transparent transition-all duration-300"
                         placeholder="Enter your email address"
                       />
                     </div>
@@ -226,7 +212,7 @@ This inquiry was submitted through the DI Trading Company website contact form.
                         name="phone"
                         value={formData.phone}
                         onChange={handleInputChange}
-                        className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
+                        className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-rose-700 focus:border-transparent transition-all duration-300"
                         placeholder="Enter your phone number"
                       />
                     </div>
@@ -244,7 +230,7 @@ This inquiry was submitted through the DI Trading Company website contact form.
                         name="company"
                         value={formData.company}
                         onChange={handleInputChange}
-                        className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
+                        className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-rose-700 focus:border-transparent transition-all duration-300"
                         placeholder="Enter your company name"
                       />
                     </div>
@@ -262,7 +248,7 @@ This inquiry was submitted through the DI Trading Company website contact form.
                     value={formData.subject}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-rose-700 focus:border-transparent transition-all duration-300"
                   >
                     <option value="">Select inquiry type</option>
                     {inquiryTypes.map((type, index) => (
@@ -285,7 +271,7 @@ This inquiry was submitted through the DI Trading Company website contact form.
                       onChange={handleInputChange}
                       required
                       rows={6}
-                      className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 resize-none"
+                      className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-rose-700 focus:border-transparent transition-all duration-300 resize-none"
                       placeholder="Please describe your requirements, project details, or any specific questions you have..."
                     />
                   </div>
@@ -296,7 +282,7 @@ This inquiry was submitted through the DI Trading Company website contact form.
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white py-4 px-6 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xl hover:shadow-cyan-500/25 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="w-full bg-rose-700 hover:bg-rose-800 text-white py-4 px-6 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xl hover:shadow-rose-700/25 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     {isSubmitting ? (
                       <>
