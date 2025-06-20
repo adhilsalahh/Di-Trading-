@@ -67,14 +67,15 @@ const Hero = () => {
               </button>
 
               {/* ✅ Download button (public folder) */}
-              <a
-                href="src\assets\Distinguished-Innovations-Company-Profile (1).pdf"
-                download="Distinguished-Innovations-Profile.pdf"
-                className="border-2 border-rose-700 hover:bg-rose-700 text-rose-700 hover:text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center space-x-2"
-              >
-                <Download className="w-5 h-5" />
-                <span>Download Profile</span>
-              </a>
+            <a
+  href="..\public\Distinguished Innovations Trading Company _11zon.pdf"
+  download="Distinguished-Innovations-Profile.pdf"
+  className="border-2 border-rose-700 hover:bg-rose-700 text-rose-700 hover:text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center space-x-2"
+>
+  <Download className="w-5 h-5" />
+  <span>Download Profile</span>
+</a>
+
             </div>
 
             {/* Features */}
