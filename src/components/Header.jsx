@@ -42,14 +42,15 @@ const Header = () => {
                 </span>
               </div>
               <div className="flex items-baseline space-x-1">
-                <span className="text-lg lg:text-xl font-medium text-white">Trading Company</span>
-              </div>
-              {/* Arabic Name - Hidden on mobile, shown on larger screens */}
-              <div className="hidden md:block">
-                <span className="text-sm text-rose-400 font-medium" dir="rtl">
+                <span className="text-sm lg:text-lg font-medium text-white">Trading Company</span>
+                 <div className="hidden md:block">
+                <span className="text-lg text-white font-semibold" dir="rtl">
                   شركة الابتكارات المتميزة للتجارة
                 </span>
               </div>
+              </div>
+              {/* Arabic Name - Hidden on mobile, shown on larger screens */}
+             
             </div>
           </div>
 
