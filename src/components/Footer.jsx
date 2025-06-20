@@ -3,12 +3,12 @@ import { Package, MapPin, Phone, Mail, Clock, Facebook, Twitter, Linkedin, Insta
 
 const Footer = () => {
   const productCategories = [
-    'Electrical Equipment',
-    'Mechanical Components',
-    'Safety Equipment',
-    'Power Tools',
+    'Electrical ',
+    'Mechanical ',
+    'Safety and Power Tools',
+    'Industrial Supplies',
     'HVAC Systems',
-    'Industrial Supplies'
+    'General Supplies'
   ];
 
   const quickLinks = [
@@ -96,7 +96,7 @@ const Footer = () => {
                 <MapPin className="w-5 h-5 text-rose-400 mt-1 flex-shrink-0" />
                 <div>
                   <p className="text-gray-300">
-                    CR 4030246522<br />
+                    <br />
                     Jeddah 45155<br />
                     PO Box: 52145
                   </p>
@@ -113,14 +113,14 @@ const Footer = () => {
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-rose-400 flex-shrink-0" />
                 <a href="mailto:info@ditradingcompany.com" className="text-gray-300 hover:text-rose-400 transition-colors duration-300">
-                  info@di-tradingcompany.com
+                  n.rashid@di-trading.com
                 </a>
               </div>
               
               <div className="flex items-center space-x-3">
                 <Clock className="w-5 h-5 text-rose-400 flex-shrink-0" />
                 <div className="text-gray-300">
-                  <p>Mon - Sat: 9:00 AM - 6:00 PM</p>
+                  <p>Sun - Thu: 9:00 AM - 6:00 PM</p>
                 </div>
               </div>
             </div>

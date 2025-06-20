@@ -7,7 +7,7 @@ const About = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-rose-700 mb-6">
-            About Distinguished Innovations Trading Company
+            About 
           </h2>
         </div>
         
