@@ -87,7 +87,7 @@ This inquiry was submitted through the Distinguished Innovations Trading Company
     {
       icon: Clock,
       title: 'Business Hours',
-      details: ['Monday - Saturday: 9:00 AM - 6:00 PM'],
+      details: ['Sunday -  Thursday: 9:00 AM - 6:00 PM'],
       color: 'text-orange-600',
       bgColor: 'bg-orange-50'
     }

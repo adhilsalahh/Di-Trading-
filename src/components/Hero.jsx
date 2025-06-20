@@ -105,7 +105,7 @@ const Hero = () => {
           </div>
 
           {/* Visual Card */}
-          <div className="relative">
+          {/* <div className="relative">
             <div className="relative z-10">
               <div className="bg-white rounded-2xl p-8 border border-gray-200 shadow-2xl">
                 <img
@@ -120,12 +120,12 @@ const Hero = () => {
               </div>
             </div>
             <div className="absolute -inset-4 bg-gradient-to-r from-rose-700 to-rose-800 rounded-2xl blur-xl opacity-10"></div>
-          </div>
+          </div> */}
         </div>
       </div>
 
       {/* Image Indicators */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-2">
+      {/* <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-2">
         {heroImages.map((_, index) => (
           <button
             key={index}
@@ -137,7 +137,7 @@ const Hero = () => {
             }`}
           />
         ))}
-      </div>
+      </div> */}
     </section>
   );
 };

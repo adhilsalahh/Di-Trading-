@@ -29,11 +29,11 @@ const Header = () => {
           {/* Logo */}
           <div className="flex items-center space-x-2 sm:space-x-3">
            <div className="relative">
-        <div className="group w-8 h-8 sm:w-10 sm:h-10 lg:w-14 lg:h-14 bg-white hover:bg-gradient-to-br hover:from-rose-600 hover:to-rose-800 rounded-xl flex items-center justify-center shadow-lg transform hover:scale-105 transition-all duration-300">
+        <div className="group w-9 h-9 sm:w-10 sm:h-10 lg:w-14 lg:h-14 bg-white hover:bg-gradient-to-br rounded-xl flex items-center justify-center shadow-lg transform hover:scale-105 transition-all duration-300">
   <img
     src={logo}
     alt="DI Logo"
-    className="w-4 h-4 sm:w-5 sm:h-5 lg:w-12 lg:h-12 object-contain transition-all duration-300"
+    className="w-7 h-7 sm:w-7 sm:h-7 lg:w-12 lg:h-12  object-contain transition-all duration-300"
   />
 </div>
 
@@ -42,18 +42,18 @@ const Header = () => {
            <div className="flex flex-col">
   {/* Main Company Name - Large on all screens */}
   <div>
-    <span className="text-xl sm:text-3xl lg:text-4xl font-bold text-rose-700 leading-tight">
+    <span className="text-xl sm:text-3xl lg:text-4xl font-bold text-rose-700  leading-tight">
       Distinguished Innovations
     </span>
   </div>
 
   {/* Trading Company + Arabic — inline on all screens */}
-  <div className="flex flex-row items-center flex-wrap gap-1 mt-1">
-    <span className="text-xs sm:text-sm lg:text-base font-medium text-white">
+  <div className="flex flex-row items-center flex-wrap gap-1 mt-0">
+    <span className="text-xs sm:text-sm lg:text-lg font-medium text-white">
       Trading Company
     </span>
     <span
-      className="text-xs sm:text-sm lg:text-base text-rose-400 font-medium"
+      className="text-xs sm:text-sm lg:text-xl text-rose-700  font-medium"
       dir="rtl"
     >
       شركة الابتكارات المتميزة للتجارة
