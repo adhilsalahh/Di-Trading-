@@ -27,30 +27,29 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
           {/* Logo */}
-          <div className="flex items-center space-x-3">
+          <div className="flex items-center space-x-2 sm:space-x-3">
             <div className="relative">
-              <div className="w-12 h-12 bg-gradient-to-br from-rose-600 to-rose-800 rounded-xl flex items-center justify-center shadow-lg transform hover:scale-105 transition-transform duration-300">
-                <Zap className="w-7 h-7 text-white" />
+              <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 bg-gradient-to-br from-rose-600 to-rose-800 rounded-xl flex items-center justify-center shadow-lg transform hover:scale-105 transition-transform duration-300">
+                <Zap className="w-4 h-4 sm:w-5 sm:h-5 lg:w-7 lg:h-7 text-white" />
               </div>
               <div className="absolute -inset-1 bg-gradient-to-br from-rose-600 to-rose-800 rounded-xl blur opacity-30 animate-pulse"></div>
             </div>
             <div className="flex flex-col">
-              {/* English Name */}
-              <div className="flex items-baseline space-x-1">
-                <span className="text-2xl lg:text-3xl font-bold text-rose-700">
+              {/* Company Name - Responsive sizing */}
+              <div>
+                <span className="text-sm sm:text-xl lg:text-3xl font-bold text-rose-700 leading-tight">
                   Distinguished Innovations
                 </span>
               </div>
-              <div className="flex items-baseline space-x-1">
-                <span className="text-sm lg:text-lg font-medium text-white">Trading Company</span>
-                 <div className="hidden md:block">
-                <span className="text-lg text-white font-semibold" dir="rtl">
+              {/* Trading Company with Arabic - Single line on mobile */}
+              <div className="flex items-center space-x-1 sm:space-x-2">
+                <span className="text-xs sm:text-sm lg:text-lg font-medium text-white">
+                  Trading Company
+                </span>
+                <span className="text-xs sm:text-sm lg:text-base text-rose-400 font-medium" dir="rtl">
                   شركة الابتكارات المتميزة للتجارة
                 </span>
               </div>
-              </div>
-              {/* Arabic Name - Hidden on mobile, shown on larger screens */}
-             
             </div>
           </div>
 
@@ -86,13 +85,6 @@ const Header = () => {
         <div className={`md:hidden transition-all duration-300 ${
           isMenuOpen ? 'max-h-80 opacity-100 mt-4' : 'max-h-0 opacity-0 overflow-hidden'
         }`}>
-          {/* Mobile Arabic Name - Centered */}
-          <div className="text-center mb-4 pb-4 border-b border-gray-700">
-            <span className="text-rose-400 font-medium text-sm" dir="rtl">
-              شركة الابتكارات المتميزة للتجارة
-            </span>
-          </div>
-          
           <nav className="flex flex-col space-y-2 pb-4">
             {navItems.map((item) => (
               <a
