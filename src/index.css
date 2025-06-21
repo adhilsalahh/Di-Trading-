@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@font-face {
+  font-family: 'Arial Rounded MT Bold';
+  src: local('Arial Rounded MT Bold'), local('ArialRoundedMTBold');
+  font-weight: bold;
+  font-style: normal;
+}

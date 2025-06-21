@@ -1,5 +1,8 @@
 import React from 'react';
 import { Zap, Wrench, Shield, Cog, Wind, Package } from 'lucide-react';
+import Mechanical from '../assets/Mechanical.jpg'
+import SafetyandPowerTools from '../assets/Safety and Power Tools.jpg'
+
 
 const Products = () => {
   const categories = [
@@ -33,7 +36,7 @@ const Products = () => {
         'Systems and Devices',
         'Motors and Generators',
       ],
-      image: 'https://images.pexels.com/photos/159298/gears-cogs-machine-machinery-159298.jpeg?auto=compress&cs=tinysrgb&w=800&h=600',
+      image:Mechanical,
          colorClass: 'text-rose-700',
       bgClass: 'bg-rose-700',
       dotClass: 'bg-rose-700'
@@ -50,7 +53,7 @@ const Products = () => {
         'Hand Tools',
         'Welding Equipment'
       ],
-      image: 'https://images.pexels.com/photos/416978/pexels-photo-416978.jpeg?auto=compress&cs=tinysrgb&w=800&h=600',
+      image:SafetyandPowerTools ,
        colorClass: 'text-rose-700',
       bgClass: 'bg-rose-700',
       dotClass: 'bg-rose-700'
@@ -132,9 +135,9 @@ const Products = () => {
                   <img 
                     src={category.image}
                     alt={category.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    className="w-full h-full robject-cove group-hover:scale-110 transition-transform duration-500"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                  <div className="absolute inset-0 "></div>
                  
                 </div>
 

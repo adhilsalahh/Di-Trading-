@@ -73,14 +73,15 @@ This inquiry was submitted through the Distinguished Innovations Trading Company
     {
       icon: Phone,
       title: 'Call Us',
-      details: ['+966 54515 5050', 'Mon - Sat: 9:00 AM - 6:00 PM'],
+      details: ['+966 54515 5050', 'Sun - Thu: 9:00 AM - 6:00 PM'],
       color: 'text-green-600',
       bgColor: 'bg-green-50'
     },
     {
       icon: Mail,
       title: 'Email Us',
-      details: ['n.rashid@di-trading.com', 'info@ditradingcompany.com'],
+      details: ['n.rashid@di-trading.com',
+         'info@di-trading.com'],
       color: 'text-blue-600',
       bgColor: 'bg-blue-50'
     },
@@ -128,22 +129,38 @@ This inquiry was submitted through the Distinguished Innovations Trading Company
               </p>
             </div>
 
-            {contactInfo.map((info, index) => {
+           {contactInfo.map((info, index) => {
               const IconComponent = info.icon;
               return (
-                <div key={index} className="flex items-start space-x-4 p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-100">
+                <div
+                  key={index}
+                  className="flex items-start space-x-4 p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-100"
+                >
                   <div className={`p-3 rounded-lg ${info.bgColor} ${info.color}`}>
                     <IconComponent className="w-6 h-6" />
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-2">{info.title}</h4>
                     {info.details.map((detail, detailIndex) => (
-                      <p key={detailIndex} className="text-gray-600 text-sm">{detail}</p>
+                      <div key={detailIndex} className="mb-1">
+                        {detail.includes('@') ? (
+                          <a
+                            href={`mailto:${detail}`}
+                           className="text-gray-600 hover:text-rose-700 text-sm block transition-colors duration-200"
+                          >
+                            {detail}
+                          </a>
+                        ) : (
+                          <p className="text-gray-600 hover:text-rose-700 text-sm block transition-colors duration-200">{detail}</p>
+                        )}
+                      </div>
                     ))}
                   </div>
                 </div>
               );
             })}
+
+
           </div>
 
           {/* Contact Form */}
@@ -184,6 +201,7 @@ This inquiry was submitted through the Distinguished Innovations Trading Company
                     </label>
                     <div className="relative">
                       <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+                      
                       <input
                         type="email"
                         id="email"

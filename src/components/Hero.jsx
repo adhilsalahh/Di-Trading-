@@ -48,15 +48,16 @@ const Hero = () => {
               <span className="text-rose-700 font-semibold text-lg">Trading & Supply Excellence</span>
             </div>
 
-            <h1 className="text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-              <span className="text-rose-700">Distinguished Innovations</span>
-              <span className="block text-gray-900 mt-2">Trading Company</span>
-            </h1>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 leading-tight font-rounded">
+  <span className="text-rose-700 whitespace-nowrap">Innovative Solutions,</span>
+  <span className="block text-gray-900 mt-2">Trusted Trade</span>
+</h1>
+
 
             <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-              Your trusted partner for comprehensive electrical equipment, mechanical components, 
-              safety tools, and industrial supplies. With years of expertise in trading and 
-              supply chain management, we serve businesses across Saudi Arabia.
+              Your trusted expertise partner for supply comprehensive electrical and mechanical products,
+               components, safety equipment, power tools and industrial supplies.
+
             </p>
 
             {/* Buttons */}

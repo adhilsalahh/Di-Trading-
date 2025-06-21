@@ -1,7 +1,6 @@
 import React from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
-import Stats from './components/Stats';
 import Products from './components/Products';
 import About from './components/About';
 import Contact from './components/Contact';
@@ -14,7 +13,7 @@ function App() {
       <Header />
       <main>
         <Hero />
-        <Stats />
+        {/* <Stats /> */}
         <Products />
         <About />
         <Contact />
