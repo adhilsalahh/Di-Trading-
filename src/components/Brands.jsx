@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState, useRef } from 'react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 import brand1 from '../assets/brands_-_Copy-05_1.webp';
 import brand2 from '../assets/brands_-_Copy-07_1.webp';
 import brand3 from '../assets/brands_-_Copy-11_1.webp';
@@ -12,8 +13,11 @@ import brand11 from '../assets/JCC-header-Logo.webp'
 import brand10 from '../assets/download.jpg'
 import brand12 from '../assets/brands_-_Copy-04_1 (2).webp'
 
-const 
-Brands = () => {
+const Brands = () => {
+  const scrollContainerRef = useRef(null);
+  const [canScrollLeft, setCanScrollLeft] = useState(false);
+  const [canScrollRight, setCanScrollRight] = useState(true);
+
   const brands = [
     {
       name: 'Schneider Electric',
@@ -27,7 +31,7 @@ Brands = () => {
     },
     {
       name: 'Siemens',
-      logo:brand3,
+      logo: brand3,
       category: 'Engineering Excellence',
     },
     {
@@ -46,60 +50,175 @@ Brands = () => {
       category: 'Industrial Tools',
     },
     {
-      name: 'Mitsubishi Electric',
-      logo:brand7,
+      name: 'DeWalt',
+      logo: brand7,
+      category: 'Power Tools',
+    },
+    {
+      name: 'Legrand',
+      logo: brand8,
+      category: 'Electrical Infrastructure',
+    },
+    {
+      name: 'Philips',
+      logo: brand9,
+      category: 'Lighting Solutions',
+    },
+    {
+      name: 'Fluke',
+      logo: brand10,
+      category: 'Testing Equipment',
+    },
+    {
+      name: 'JCC Lighting',
+      logo: brand11,
+      category: 'LED Solutions',
+    },
+    {
+      name: 'Mitsubishi',
+      logo: brand12,
       category: 'Automation Systems',
-    },
-    {
-      name: 'Rockwell Automation',
-      logo:brand8,
-      category: 'Industrial Automation',
-    },
-    {
-      name: 'Rockwell Automation',
-      logo:brand9,
-      category: 'Industrial Automation',
-    },{
-      name: 'Rockwell Automation',
-      logo:brand10,
-      category: 'Industrial Automation',
-    },{
-      name: 'Rockwell Automation',
-      logo:brand11,
-      category: 'Industrial Automation',
-    },{
-      name: 'Rockwell Automation',
-      logo:brand12,
-      category: 'Industrial Automation',
     },
   ];
 
-  // Duplicate list for infinite scroll
-  const duplicatedBrands = [...brands, ...brands];
+  const checkScrollButtons = () => {
+    if (scrollContainerRef.current) {
+      const { scrollLeft, scrollWidth, clientWidth } = scrollContainerRef.current;
+      setCanScrollLeft(scrollLeft > 0);
+      setCanScrollRight(scrollLeft < scrollWidth - clientWidth - 1);
+    }
+  };
+
+  const scrollLeft = () => {
+    if (scrollContainerRef.current) {
+      const scrollAmount = scrollContainerRef.current.clientWidth * 0.8;
+      scrollContainerRef.current.scrollBy({
+        left: -scrollAmount,
+        behavior: 'smooth'
+      });
+      setTimeout(checkScrollButtons, 300);
+    }
+  };
+
+  const scrollRight = () => {
+    if (scrollContainerRef.current) {
+      const scrollAmount = scrollContainerRef.current.clientWidth * 0.8;
+      scrollContainerRef.current.scrollBy({
+        left: scrollAmount,
+        behavior: 'smooth'
+      });
+      setTimeout(checkScrollButtons, 300);
+    }
+  };
+
+  React.useEffect(() => {
+    checkScrollButtons();
+    const handleResize = () => checkScrollButtons();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   return (
-    <section className="py-16 bg-gradient-to-br from-gray-50 to-gray-100 overflow-hidden">
+    <section className="py-12 md:py-16 bg-gradient-to-br from-gray-50 to-gray-100">
       <div className="max-w-7xl mx-auto px-4">
-     <div className="relative overflow-hidden">
-  <div className="flex w-[200%] animate-scroll-brands">
-    {[...brands, ...brands].map((brand, index) => (
-      <div
-        key={`${brand.name}-${index}`}
-        className="flex-shrink-0 mx-4 md:mx-6 group cursor-pointer"
-      >
-        <div className="w-20 h-15 md:w-36 md:h-24 bg-white rounded-xl transition duration-500 flex items-center justify-center p-4 border border-gray-200 hover:border-rose-200 group-hover:scale-110">
-          <img
-            src={brand.logo}
-            alt={brand.name}
-            className="max-w-full max-h-12 md:max-h-14 object-contain transition duration-500"
-          />
+        {/* Header */}
+        <div className="text-center mb-8 md:mb-12">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-rose-700 mb-4">
+            Trusted Brand Partners
+          </h2>
+          <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto">
+            We partner with industry-leading brands to deliver quality products and reliable solutions
+          </p>
+        </div>
+
+        {/* Brand Carousel Container */}
+        <div className="relative">
+          {/* Left Navigation Button */}
+          <button
+            onClick={scrollLeft}
+            disabled={!canScrollLeft}
+            className={`absolute left-0 top-1/2 -translate-y-1/2 z-20 w-10 h-10 md:w-12 md:h-12 rounded-full shadow-lg transition-all duration-300 flex items-center justify-center ${
+              canScrollLeft
+                ? 'bg-white hover:bg-rose-50 text-rose-700 hover:text-rose-800 cursor-pointer hover:scale-110'
+                : 'bg-gray-200 text-gray-400 cursor-not-allowed opacity-50'
+            }`}
+            aria-label="Scroll brands left"
+          >
+            <ChevronLeft className="w-5 h-5 md:w-6 md:h-6" />
+          </button>
+
+          {/* Right Navigation Button */}
+          <button
+            onClick={scrollRight}
+            disabled={!canScrollRight}
+            className={`absolute right-0 top-1/2 -translate-y-1/2 z-20 w-10 h-10 md:w-12 md:h-12 rounded-full shadow-lg transition-all duration-300 flex items-center justify-center ${
+              canScrollRight
+                ? 'bg-white hover:bg-rose-50 text-rose-700 hover:text-rose-800 cursor-pointer hover:scale-110'
+                : 'bg-gray-200 text-gray-400 cursor-not-allowed opacity-50'
+            }`}
+            aria-label="Scroll brands right"
+          >
+            <ChevronRight className="w-5 h-5 md:w-6 md:h-6" />
+          </button>
+
+          {/* Brands Container */}
+          <div className="mx-8 md:mx-16 relative overflow-hidden">
+            <div
+              ref={scrollContainerRef}
+              className="flex gap-4 md:gap-6 overflow-x-auto scrollbar-hide pb-4"
+              style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+              onScroll={checkScrollButtons}
+            >
+              {brands.map((brand, index) => (
+                <div
+                  key={`${brand.name}-${index}`}
+                  className="flex-shrink-0 group cursor-pointer"
+                >
+                  <div className="w-20 h-16 sm:w-24 sm:h-18 md:w-32 md:h-24 lg:w-40 lg:h-28 xl:w-44 xl:h-32 bg-white rounded-lg md:rounded-xl transition-all duration-300 flex items-center justify-center p-3 md:p-4 border border-gray-200 hover:border-rose-200 group-hover:scale-105 group-hover:shadow-lg hover:shadow-rose-100">
+                    <img
+                      src={brand.logo}
+                      alt={brand.name}
+                      className="max-w-full max-h-full object-contain transition-all duration-300 group-hover:brightness-110"
+                    />
+                  </div>
+                  {/* Brand Name Tooltip */}
+                
+                </div>
+              ))}
+            </div>
+
+            {/* Gradient Overlays */}
+            <div className="absolute left-0 top-0 bottom-0 w-4 md:w-8 bg-gradient-to-r from-gray-50 to-transparent pointer-events-none z-10"></div>
+            <div className="absolute right-0 top-0 bottom-0 w-4 md:w-8 bg-gradient-to-l from-gray-100 to-transparent pointer-events-none z-10"></div>
+          </div>
+
+          {/* Scroll Indicators */}
+          <div className="flex justify-center mt-6 space-x-2">
+            <div className={`w-2 h-2 rounded-full transition-all duration-300 ${canScrollLeft ? 'bg-gray-300' : 'bg-rose-700'}`}></div>
+            <div className={`w-2 h-2 rounded-full transition-all duration-300 ${canScrollLeft && canScrollRight ? 'bg-rose-700' : 'bg-gray-300'}`}></div>
+            <div className={`w-2 h-2 rounded-full transition-all duration-300 ${canScrollRight ? 'bg-gray-300' : 'bg-rose-700'}`}></div>
+          </div>
+        </div>
+
+        {/* Call to Action */}
+        <div className="text-center mt-8 md:mt-12">
+          <p className="text-sm md:text-base text-gray-600 mb-4">
+            Looking for a specific brand or product?
+          </p>
+          <a
+            href="#contact"
+            className="inline-flex items-center px-4 md:px-6 py-2 md:py-3 bg-rose-700 hover:bg-rose-800 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl text-sm md:text-base"
+          >
+            Contact Our Team
+          </a>
         </div>
       </div>
-    ))}
-  </div>
-</div>
 
-      </div>
+      <style jsx>{`
+        .scrollbar-hide::-webkit-scrollbar {
+          display: none;
+        }
+      `}</style>
     </section>
   );
 };

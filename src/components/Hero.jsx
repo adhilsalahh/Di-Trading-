@@ -24,6 +24,32 @@ const Hero = () => {
     return () => clearInterval(interval);
   }, []);
 
+  const handleDownloadProfile = () => {
+    try {
+      // Create a link element and trigger download
+      const link = document.createElement('a');
+      link.href = '/Distinguished Innovations Trading Company _11zon.pdf';
+      link.download = 'Distinguished-Innovations-Company-Profile.pdf';
+      link.target = '_blank';
+      
+      // Append to body, click, and remove
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    } catch (error) {
+      console.error('Download failed:', error);
+      // Fallback: open in new tab
+      window.open('/Distinguished Innovations Trading Company _11zon.pdf', '_blank');
+    }
+  };
+
+  const scrollToProducts = () => {
+    const productsSection = document.getElementById('products');
+    if (productsSection) {
+      productsSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section id="home" className="relative min-h-screen flex items-center bg-white overflow-hidden">
       {/* Background */}
@@ -48,35 +74,33 @@ const Hero = () => {
               <span className="text-rose-700 font-semibold text-lg">Trading & Supply Excellence</span>
             </div>
 
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 leading-tight font-rounded">
-  <span className="text-rose-700 whitespace-nowrap">Innovative Solutions,</span>
-  <span className="block text-gray-900 mt-2">Trusted Trade</span>
-</h1>
-
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 leading-tight font-rounded">
+              <span className="text-rose-700 whitespace-nowrap">Innovative Solutions,</span>
+              <span className="block text-gray-900 mt-2">Trusted Trade</span>
+            </h1>
 
             <p className="text-xl text-gray-600 mb-8 leading-relaxed">
               Your trusted expertise partner for supply comprehensive electrical and mechanical products,
                components, safety equipment, power tools and industrial supplies.
-
             </p>
 
             {/* Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 mb-12">
-              <button className="group bg-rose-700 hover:bg-rose-800 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xl hover:shadow-rose-700/25 transform hover:scale-105">
+              <button 
+                onClick={scrollToProducts}
+                className="group bg-rose-700 hover:bg-rose-800 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xl hover:shadow-rose-700/25 transform hover:scale-105"
+              >
                 <span>Explore Products</span>
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
               </button>
 
-              {/* ✅ Download button (public folder) */}
-            <a
-  href="..\public\Distinguished Innovations Trading Company _11zon.pdf"
-  download="Distinguished-Innovations-Profile.pdf"
-  className="border-2 border-rose-700 hover:bg-rose-700 text-rose-700 hover:text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center space-x-2"
->
-  <Download className="w-5 h-5" />
-  <span>Download Profile</span>
-</a>
-
+              <button
+                onClick={handleDownloadProfile}
+                className="border-2 border-rose-700 hover:bg-rose-700 text-rose-700 hover:text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center space-x-2 transform hover:scale-105"
+              >
+                <Download className="w-5 h-5" />
+                <span>Download Profile</span>
+              </button>
             </div>
 
             {/* Features */}
@@ -104,41 +128,8 @@ const Hero = () => {
               </div>
             </div>
           </div>
-
-          {/* Visual Card */}
-          {/* <div className="relative">
-            <div className="relative z-10">
-              <div className="bg-white rounded-2xl p-8 border border-gray-200 shadow-2xl">
-                <img
-                  src={heroImages[(currentImageIndex + 1) % heroImages.length]}
-                  alt="Electrical Products"
-                  className="w-full h-64 object-cover rounded-lg mb-6 transition-all duration-1000"
-                />
-                <div className="text-center">
-                  <h3 className="text-xl font-bold text-rose-700 mb-2">Wide Range of Products</h3>
-                  <p className="text-gray-600">Electrical, mechanical, safety & industrial supplies</p>
-                </div>
-              </div>
-            </div>
-            <div className="absolute -inset-4 bg-gradient-to-r from-rose-700 to-rose-800 rounded-2xl blur-xl opacity-10"></div>
-          </div> */}
         </div>
       </div>
-
-      {/* Image Indicators */}
-      {/* <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-2">
-        {heroImages.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => setCurrentImageIndex(index)}
-            className={`w-3 h-3 rounded-full transition-all duration-300 ${
-              index === currentImageIndex
-                ? 'bg-rose-700 scale-125'
-                : 'bg-gray-300 hover:bg-gray-400'
-            }`}
-          />
-        ))}
-      </div> */}
     </section>
   );
 };
