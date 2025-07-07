@@ -2,8 +2,7 @@ import React from 'react';
 import { Zap, Wrench, Shield, Cog, Wind, Package } from 'lucide-react';
 import Mechanical from '../assets/Mechanical.jpg'
 import SafetyandPowerTools from '../assets/Safety and Power Tools.jpg'
-
-
+import Electrical from '../assets/Electrical.png'
 const Products = () => {
   const categories = [
     {
@@ -19,7 +18,7 @@ const Products = () => {
         'Tools And Equipments',
         'Conduits & Accessories'
       ],
-      image: 'https://images.pexels.com/photos/257736/pexels-photo-257736.jpeg?auto=compress&cs=tinysrgb&w=800&h=600',
+      image: Electrical,
       colorClass: 'text-rose-700',
       bgClass: 'bg-rose-700',
       dotClass: 'bg-rose-700'

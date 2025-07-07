@@ -174,11 +174,11 @@ const Brands = () => {
                   key={`${brand.name}-${index}`}
                   className="flex-shrink-0 group cursor-pointer"
                 >
-                  <div className="w-20 h-16 sm:w-24 sm:h-18 md:w-32 md:h-24 lg:w-40 lg:h-28 xl:w-44 xl:h-32 bg-white rounded-lg md:rounded-xl transition-all duration-300 flex items-center justify-center p-3 md:p-4 border border-gray-200 hover:border-rose-200 group-hover:scale-105 group-hover:shadow-lg hover:shadow-rose-100">
+                  <div className="w-20 h-16 sm:w-24 sm:h-18 md:w-32 md:h-20 lg:w-28 lg:h-10 xl:w-44 xl:h-32 bg-white rounded-lg md:rounded-xl transition-all duration-300 flex items-center justify-center p-0 md:p-1 border border-gray-200 hover:border-rose-200 group-hover:scale-105 group-hover:shadow-lg hover:shadow-rose-100">
                     <img
                       src={brand.logo}
                       alt={brand.name}
-                      className="max-w-full max-h-full object-contain transition-all duration-300 group-hover:brightness-110"
+                      className="max-w-full max-h-full object-contain transition-all duration-300 group-hover:brightness-110 px-1"
                     />
                   </div>
                   {/* Brand Name Tooltip */}

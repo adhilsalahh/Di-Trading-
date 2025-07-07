@@ -109,7 +109,7 @@ const Footer = () => {
     <div className="space-y-4 text-sm">
       <div className="flex items-start space-x-3">
         <MapPin className="w-5 h-5 text-rose-700 mt-1 flex-shrink-0" />
-        <p className="text-gray-300">Jeddah 45155<br />PO Box: 52145</p>
+        <p className="text-gray-300">CR 7035876601<br />Jeddah 8113<br />PO Box: 23218</p>
       </div>
       <div className="flex items-center space-x-3">
         <Phone className="w-5 h-5 text-rose-700 flex-shrink-0" />
@@ -124,13 +124,13 @@ const Footer = () => {
             n.rashid@di-trading.com
           </a>
           <a href="mailto:info@di-trading.com" className="text-gray-300 hover:text-rose-400 transition-colors duration-300">
-            info@di-trading.com
+            ditradingksa@gmail.com
           </a>
         </div>
       </div>
       <div className="flex items-center space-x-3">
         <Clock className="w-5 h-5 text-rose-700 flex-shrink-0" />
-        <p className="text-gray-300">Sun - Thu: 9:00 AM - 6:00 PM</p>
+        <p className="text-gray-300">Sunday - Thursday: 9:00 AM - 6:00 PM</p>
       </div>
     </div>
   </div>
