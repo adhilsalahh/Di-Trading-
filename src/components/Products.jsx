@@ -1,8 +1,11 @@
 import React from 'react';
 import { Zap, Wrench, Shield, Cog, Wind, Package } from 'lucide-react';
-import Mechanical from '../assets/Mechanical.jpg'
 import SafetyandPowerTools from '../assets/Safety and Power Tools.jpg'
 import Electrical from '../assets/Electrical.png'
+import It from '../assets/it solution.png'
+import indust from '../assets/indust.png'
+import mec from '../assets/mec.png';
+import Gen from '../assets/gen.png'
 const Products = () => {
   const categories = [
     {
@@ -35,7 +38,7 @@ const Products = () => {
         'Systems and Devices',
         'Motors and Generators',
       ],
-      image:Mechanical,
+      image:mec,
          colorClass: 'text-rose-700',
       bgClass: 'bg-rose-700',
       dotClass: 'bg-rose-700'
@@ -68,23 +71,23 @@ const Products = () => {
         'Automation Components',
         'Lifting Equipment'
       ],
-      image: 'https://images.pexels.com/photos/256369/pexels-photo-256369.jpeg?auto=compress&cs=tinysrgb&w=800&h=600',
+      image:indust,
         colorClass: 'text-rose-700',
       bgClass: 'bg-rose-700',
       dotClass: 'bg-rose-700'
     },
     {
       icon: Wind,
-      title: 'HVAC Systems',
-      subtitle: 'Climate Control Solutions',
-      description: 'Complete heating, ventilation, and air conditioning systems for optimal indoor climate control.',
+      title: 'IT Solutions',
+      subtitle: 'Technology & Digital Infrastructure',
+      description: 'Complete IT solutions and technology equipment for modern business operations and digital transformation',
       items: [
-        'Air Conditioning',
-        'Ventilation Systems',
-        'Ductwork',
-        'Controls Systems'
+        'Computers & Laptops',
+        'Printers & Scanners',
+        'IT Accessories',
+        'Networking Equipment'
       ],
-      image: 'https://images.pexels.com/photos/8092/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=800&h=600',
+      image: It,
       colorClass: 'text-rose-700',
       bgClass: 'bg-rose-700',
       dotClass: 'bg-rose-700'
@@ -100,7 +103,7 @@ const Products = () => {
         'Office & Stationery Supplies',
         'Consumable Items'
       ],
-      image: 'https://images.pexels.com/photos/162553/keys-workshop-mechanic-tools-162553.jpeg?auto=compress&cs=tinysrgb&w=800&h=600',
+      image: Gen,
         colorClass: 'text-rose-700',
       bgClass: 'bg-rose-700',
       dotClass: 'bg-rose-700'

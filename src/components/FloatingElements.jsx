@@ -19,7 +19,7 @@ const FloatingElements = () => {
 
   const openWhatsApp = () => {
     const phoneNumber = '966545155050'; // Saudi Arabia format
-    const message = 'Hello! I would like to inquire about your electrical equipment and trading services from Distinguished Innovations Trading Company.';
+    const message = 'Hello! I would like to inquire about your services.';
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     
     // Open in new tab/window

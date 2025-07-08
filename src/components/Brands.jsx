@@ -124,11 +124,9 @@ const Brands = () => {
         {/* Header */}
         <div className="text-center mb-8 md:mb-12">
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-rose-700 mb-4">
-            Trusted Brand Partners
+             Brands
           </h2>
-          <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto">
-            We partner with industry-leading brands to deliver quality products and reliable solutions
-          </p>
+         
         </div>
 
         {/* Brand Carousel Container */}

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
-import logo from '../assets/di_logo-1-removebg-preview.png';
+import logo from '../assets/di logo.png';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -37,7 +37,7 @@ const Header = () => {
                 <img
                   src={logo}
                   alt="DI Logo"
-                  className="w-5 h-5 sm:w-7 sm:h-7 md:w-9 md:h-9 lg:w-10 lg:h-10 object-contain"
+                  className="w-5 h-5 sm:w-7 sm:h-7 md:w-15 md:h-15 lg:w-12 lg:h-12 object-contain"
                 />
               </div>
             </div>
