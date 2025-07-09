@@ -172,7 +172,7 @@ const Brands = () => {
                   key={`${brand.name}-${index}`}
                   className="flex-shrink-0 group cursor-pointer"
                 >
-                  <div className="w-20 h-16 sm:w-24 sm:h-18 md:w-32 md:h-20 lg:w-28 lg:h-10 xl:w-44 xl:h-32 bg-white rounded-lg md:rounded-xl transition-all duration-300 flex items-center justify-center p-0 md:p-1 border border-gray-200 hover:border-rose-200 group-hover:scale-105 group-hover:shadow-lg hover:shadow-rose-100">
+                  <div className="w-14 h-10 sm:w-16 sm:h-10 md:w-20 md:h-10 lg:w-24 lg:h-12 xl:w-44 xl:h-32 bg-white rounded-lg md:rounded-xl transition-all duration-300 flex items-center justify-center p-0 md:p-1 border border-gray-200 hover:border-rose-200 group-hover:scale-105 group-hover:shadow-lg hover:shadow-rose-100">
                     <img
                       src={brand.logo}
                       alt={brand.name}
@@ -199,17 +199,7 @@ const Brands = () => {
         </div>
 
         {/* Call to Action */}
-        <div className="text-center mt-8 md:mt-12">
-          <p className="text-sm md:text-base text-gray-600 mb-4">
-            Looking for a specific brand or product?
-          </p>
-          <a
-            href="#contact"
-            className="inline-flex items-center px-4 md:px-6 py-2 md:py-3 bg-rose-700 hover:bg-rose-800 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl text-sm md:text-base"
-          >
-            Contact Our Team
-          </a>
-        </div>
+      
       </div>
 
       <style jsx>{`
