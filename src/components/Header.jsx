@@ -53,9 +53,9 @@ const Header = () => {
               </div>
               
               {/* Arabic Text - Hidden on very small screens, shown on larger mobile */}
-              <div className=" xs:block sm:block">
-                 <span className="text-xs sm:text-sm md:text-base lg:text-lg font-medium text-white font-rounded whitespace-nowrap">
-                  Trading Company .
+              <div className=" xs:block sm:block ">
+                 <span className="text-xs sm:text-sm md:text-base mr-2 lg:text-lg font-medium text-white font-rounded whitespace-nowrap">
+                  Trading Company 
                 </span>
                 <span className="text-xs sm:text-sm md:text-base lg:text-lg font-medium text-white font-rounded" dir="rtl">
                   شركة الابتكارات المتميزة للتجارة

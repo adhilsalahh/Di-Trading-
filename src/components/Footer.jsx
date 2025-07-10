@@ -109,7 +109,7 @@ const Footer = () => {
     <div className="space-y-4 text-sm">
       <div className="flex items-start space-x-3">
         <MapPin className="w-5 h-5 text-rose-700 mt-1 flex-shrink-0" />
-        <p className="text-gray-300">CR 7035876601<br />Jeddah 8113<br />PO Box: 23218</p>
+        <p className="text-gray-300">Jeddah 8113<br />PO Code: 23218</p>
       </div>
       <div className="flex items-center space-x-3">
         <Phone className="w-5 h-5 text-rose-700 flex-shrink-0" />

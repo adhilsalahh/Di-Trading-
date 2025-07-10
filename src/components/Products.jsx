@@ -1,11 +1,9 @@
 import React from 'react';
 import { Zap, Wrench, Shield, Cog, Wind, Package } from 'lucide-react';
-import SafetyandPowerTools from '../assets/Safety and Power Tools.jpg'
-import Electrical from '../assets/Electrical.png'
-import It from '../assets/it solution.png'
-import indust from '../assets/indust.png'
-import mec from '../assets/mec.png';
-import Gen from '../assets/gen.png'
+import SafetyandPowerTools from '../assets/safety and power tools.png'
+import It from '../assets/IT Solution.png'
+import indust from '../assets/Industrial Supplies.png'
+import Gen from '../assets/Gena.png'
 const Products = () => {
   const categories = [
     {
@@ -21,10 +19,13 @@ const Products = () => {
         'Tools And Equipments',
         'Conduits & Accessories'
       ],
-      image: Electrical,
-      colorClass: 'text-rose-700',
-      bgClass: 'bg-rose-700',
-      dotClass: 'bg-rose-700'
+     
+  image: "https://images.pexels.com/photos/257736/pexels-photo-257736.jpeg?auto=compress&cs=tinysrgb&w=800&h=600",
+  colorClass: 'text-rose-700',
+  bgClass: 'bg-rose-700',
+  dotClass: 'bg-rose-700'
+
+
     },
     {
       icon: Cog,
@@ -38,7 +39,7 @@ const Products = () => {
         'Systems and Devices',
         'Motors and Generators',
       ],
-      image:mec,
+      image:"https://images.pexels.com/photos/159298/gears-cogs-machine-machinery-159298.jpeg?auto=compress&cs=tinysrgb&w=800&h=600",
          colorClass: 'text-rose-700',
       bgClass: 'bg-rose-700',
       dotClass: 'bg-rose-700'

@@ -87,7 +87,7 @@ This inquiry was submitted through your website contact form.
     {
       icon: MapPin,
       title: 'Visit Our Office',
-      details: ['CR 7035876601 ,Jeddah 8113', 'PO Box: 23218'],
+      details: ['Jeddah 8113', 'PO Code: 23218'],
       color: 'text-rose-700',
       bgColor: 'bg-rose-50'
     },

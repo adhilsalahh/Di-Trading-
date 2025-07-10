@@ -1,21 +1,25 @@
 import React, { useState, useEffect } from 'react';
 import { ArrowRight, Package, ShieldCheck, Award, Download, Play, Pause } from 'lucide-react';
+import gen from '../assets/Gena.png'
 
+import indust from '../assets/Industrial Supplies.png'
 const Hero = () => {
   // Professional industrial/electrical equipment images for the carousel
   const carouselImages = [
     'https://images.pexels.com/photos/257736/pexels-photo-257736.jpeg?auto=compress&cs=tinysrgb&w=800&h=600', // Electrical control panel
-    'https://images.pexels.com/photos/162553/keys-workshop-mechanic-tools-162553.jpeg?auto=compress&cs=tinysrgb&w=800&h=600', // Industrial tools
-    'https://images.pexels.com/photos/5691659/pexels-photo-5691659.jpeg?auto=compress&cs=tinysrgb&w=800&h=600', // Industrial automation
-    'https://images.pexels.com/photos/4792509/pexels-photo-4792509.jpeg?auto=compress&cs=tinysrgb&w=800&h=600' // Electrical equipment
+    'https://images.pexels.com/photos/162553/keys-workshop-mechanic-tools-162553.jpeg?auto=compress&cs=tinysrgb&w=800&h=600', 
+    gen,
+    indust,
+
   ];
 
   // Background images for the full hero section
   const backgroundImages = [
     'https://images.pexels.com/photos/159298/gears-cogs-machine-machinery-159298.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1280',
     'https://images.pexels.com/photos/257736/pexels-photo-257736.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1280',
-    'https://images.pexels.com/photos/162553/keys-workshop-mechanic-tools-162553.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1280',
-    'https://images.pexels.com/photos/1108572/pexels-photo-1108572.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1280'
+    gen,
+    indust,
+
   ];
 
   const [currentCarouselIndex, setCurrentCarouselIndex] = useState(0);
@@ -166,10 +170,10 @@ const Hero = () => {
         {backgroundImages.map((_, index) => (
           <div
             key={index}
-            className={`w-2 h-2 rounded-full transition-all duration-300 ${
+            className={`w-2 h-2 rounded-full transition-all duration-500 ${
               index === currentBackgroundIndex
-                ? 'bg-white scale-125'
-                : 'bg-white/50'
+                ? 'bg-transparent scale-125'
+                : 'bg-transparent'
             }`}
           />
         ))}
