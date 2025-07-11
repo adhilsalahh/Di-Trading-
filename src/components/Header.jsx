@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Download } from 'lucide-react';
 import logo from '../assets/di logo.png';
 
 const Header = () => {
@@ -18,6 +18,22 @@ const Header = () => {
     { name: 'About', href: '#about' },
     { name: 'Contact', href: '#contact' },
   ];
+
+  const handleDownloadProfile = () => {
+    try {
+      const link = document.createElement('a');
+      link.href = '/Distinguished Innovations Trading Company _11zon.pdf';
+      link.download = 'Distinguished-Innovations-Company-Profile.pdf';
+      link.target = '_blank';
+      
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    } catch (error) {
+      console.error('Download failed:', error);
+      window.open('/Distinguished Innovations Trading Company _11zon.pdf', '_blank');
+    }
+  };
 
   return (
     <header
@@ -65,17 +81,25 @@ const Header = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-1 flex-shrink-0">
+          <nav className="hidden md:flex items-center space-x-1 lg:space-x-2 flex-shrink-0">
             {navItems.map((item) => (
               <a
                 key={item.name}
                 href={item.href}
-                className="relative px-4 lg:px-6 py-3 text-gray-300 hover:text-white font-medium transition-all duration-300 group rounded-lg hover:bg-white/10"
+                className="relative px-3 lg:px-4 py-3 text-gray-300 hover:text-white font-medium transition-all duration-300 group rounded-lg hover:bg-white/10"
               >
                 {item.name}
                 <span className="absolute bottom-1 left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-rose-600 to-rose-800 transition-all duration-300 group-hover:w-8 rounded-full"></span>
               </a>
             ))}
+            <button
+              onClick={handleDownloadProfile}
+              className="ml-2 lg:ml-4 border-2 border-rose-700 hover:bg-rose-700 text-rose-700 hover:text-white px-3 lg:px-4 py-2 rounded-lg font-semibold transition-all duration-300 flex items-center space-x-2 transform hover:scale-105 text-sm lg:text-base"
+            >
+              <Download className="w-4 h-4" />
+              <span className="hidden lg:inline">Download Profile</span>
+              <span className="lg:hidden">Profile</span>
+            </button>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -105,13 +129,16 @@ const Header = () => {
                 {item.name}
               </a>
             ))}
-            <a
-              href="#contact"
-              className="mt-2 bg-gradient-to-r from-rose-600 to-rose-800 text-white px-4 py-3 rounded-lg font-semibold transition-all duration-300 mx-4 text-center text-sm sm:text-base"
-              onClick={() => setIsMenuOpen(false)}
+            <button
+              onClick={() => {
+                handleDownloadProfile();
+                setIsMenuOpen(false);
+              }}
+              className="mt-2 border-2 border-rose-700 hover:bg-rose-700 text-rose-700 hover:text-white px-4 py-3 rounded-lg font-semibold transition-all duration-300 mx-4 text-center text-sm sm:text-base flex items-center justify-center space-x-2"
             >
-              Get Quote
-            </a>
+              <Download className="w-4 h-4" />
+              <span>Download Profile</span>
+            </button>
           </nav>
         </div>
       </div>

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ArrowRight, Package, ShieldCheck, Award, Download, Play, Pause } from 'lucide-react';
+import { ArrowRight, Package, ShieldCheck, Award } from 'lucide-react';
 import gen from '../assets/Gena.png'
 
 import indust from '../assets/Industrial Supplies.png'
@@ -50,22 +50,6 @@ const Hero = () => {
       clearInterval(backgroundInterval);
     };
   }, [isCarouselPaused]);
-
-  const handleDownloadProfile = () => {
-    try {
-      const link = document.createElement('a');
-      link.href = '/Distinguished Innovations Trading Company _11zon.pdf';
-      link.download = 'Distinguished-Innovations-Company-Profile.pdf';
-      link.target = '_blank';
-      
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-    } catch (error) {
-      console.error('Download failed:', error);
-      window.open('/Distinguished Innovations Trading Company _11zon.pdf', '_blank');
-    }
-  };
 
   const scrollToProducts = () => {
     const productsSection = document.getElementById('products');
@@ -124,14 +108,6 @@ const Hero = () => {
             >
               <span>Explore Products</span>
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
-            </button>
-
-            <button
-              onClick={handleDownloadProfile}
-              className="border-2 border-rose-700 hover:bg-rose-700 text-white hover:text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center space-x-2 transform hover:scale-105"
-            >
-              <Download className="w-5 h-5" />
-              <span>Download Profile</span>
             </button>
           </div>
 
