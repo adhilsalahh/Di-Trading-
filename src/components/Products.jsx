@@ -1,7 +1,7 @@
 import React from 'react';
 import { Zap, Wrench, Shield, Cog, Wind, Package } from 'lucide-react';
 import SafetyandPowerTools from '../assets/safety and power tools.png'
-import It from '../assets/IT Solution.png'
+import It from '../assets/It Solution.png'
 import indust from '../assets/Industrial Supplies.png'
 import Gen from '../assets/Gena.png'
 const Products = () => {
