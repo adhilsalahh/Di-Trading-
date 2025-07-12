@@ -61,15 +61,15 @@ const Header = () => {
             {/* Text Container - Responsive and flexible */}
             <div className="flex flex-col leading-tight min-w-0 flex-1">
               {/* Main Company Name - Single line */}
-              <div>
+              <div className="mb-0">
                 <span className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-2xl font-bold text-rose-700 font-rounded whitespace-nowrap">
                   Distinguished Innovations
                 </span>
               </div>
               
               {/* Trading Company + Arabic Text*/}
-              <div className="flex flex-wrap items-center gap-x-1">
-                <span className="text-sm sm:text-base md:text-lg lg:text-xl font-medium text-white font-rounded whitespace-nowrap">
+              <div className="flex flex-wrap  items-center gap-x-1">
+                <span className="text-xs sm:text-base md:text-lg lg:text-lg font-medium text-white font-rounded whitespace-nowrap">
                   Trading Company
                 </span>
                 <span className="text-xs sm:text-sm md:text-base lg:text-lg font-medium text-rose-700 font-rounded" dir="rtl">
