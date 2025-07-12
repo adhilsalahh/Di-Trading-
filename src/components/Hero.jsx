@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ArrowRight, Package, ShieldCheck, Award } from 'lucide-react';
+import { ArrowRight, Package, ShieldCheck, Award, Download } from 'lucide-react';
 import gen from '../assets/Gena.png'
 
 import indust from '../assets/Industrial Supplies.png'
@@ -58,6 +58,22 @@ const Hero = () => {
     }
   };
 
+  const handleDownloadProfile = () => {
+    try {
+      const link = document.createElement('a');
+      link.href = '/Distinguished Innovations Trading Company _11zon.pdf';
+      link.download = 'Distinguished-Innovations-Company-Profile.pdf';
+      link.target = '_blank';
+      
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    } catch (error) {
+      console.error('Download failed:', error);
+      window.open('/Distinguished Innovations Trading Company _11zon.pdf', '_blank');
+    }
+  };
+
   const nextCarouselImage = () => {
     setCurrentCarouselIndex((prevIndex) =>
       (prevIndex + 1) % carouselImages.length
@@ -101,13 +117,22 @@ const Hero = () => {
           </p>
 
           {/* Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+          <div className="flex flex-col lg:flex-row gap-4 justify-center mb-12">
             <button 
               onClick={scrollToProducts}
-              className="group bg-rose-600 hover:bg-rose-700 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xl hover:shadow-rose-600/25 transform hover:scale-105"
+              className="group bg-rose-600 hover:bg-rose-700 text-white px-6 lg:px-8 py-3 lg:py-4 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xl hover:shadow-rose-600/25 transform hover:scale-105"
             >
               <span>Explore Products</span>
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+            </button>
+            
+            {/* Download Button - Only visible on desktop/laptop (lg and above) */}
+            <button
+              onClick={handleDownloadProfile}
+              className="flex lg:hidden group border-2 border-rose-600 hover:bg-rose-600 text-rose-600 hover:text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 items-center justify-center space-x-2 shadow-lg hover:shadow-xl hover:shadow-rose-600/25 transform hover:scale-105"
+            >
+              <Download className="w-5 h-5" />
+              <span>Download Profile</span>
             </button>
           </div>
 

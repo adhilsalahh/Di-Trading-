@@ -49,31 +49,30 @@ const Header = () => {
           <div className="flex items-center space-x-2 sm:space-x-3 flex-1 min-w-0">
             {/* Logo Container - Fixed size for consistency */}
             <div className="flex-shrink-0">
-              <div className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 bg-white rounded-lg sm:rounded-xl flex items-center justify-center shadow-md">
+              <div className="w-10 h-10 sm:w-10 sm:h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 bg-white rounded-lg sm:rounded-xl flex items-center justify-center shadow-md">
                 <img
                   src={logo}
                   alt="DI Logo"
-                  className="w-5 h-5 sm:w-7 sm:h-7 md:w-15 md:h-15 lg:w-12 lg:h-12 object-contain"
+                  className="w-9 h-9 sm:w-8 sm:h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 object-contain"
                 />
               </div>
             </div>
 
             {/* Text Container - Responsive and flexible */}
             <div className="flex flex-col leading-tight min-w-0 flex-1">
-              {/* Main Company Name */}
-              <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-1">
-                <span className="text-base sm:text-base md:text-lg lg:text-3xl xl:text-2xl font-bold text-rose-700 font-rounded whitespace-nowrap">
+              {/* Main Company Name - Single line */}
+              <div>
+                <span className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-2xl font-bold text-rose-700 font-rounded whitespace-nowrap">
                   Distinguished Innovations
                 </span>
-               
               </div>
               
-              {/* Arabic Text - Hidden on very small screens, shown on larger mobile */}
-              <div className=" xs:block sm:block ">
-                 <span className="text-xs sm:text-sm md:text-base mr-2 lg:text-lg font-medium text-white font-rounded whitespace-nowrap">
-                  Trading Company 
+              {/* Trading Company + Arabic Text*/}
+              <div className="flex flex-wrap items-center gap-x-1">
+                <span className="text-sm sm:text-base md:text-lg lg:text-xl font-medium text-white font-rounded whitespace-nowrap">
+                  Trading Company
                 </span>
-                <span className="text-xs sm:text-sm md:text-base lg:text-lg font-medium text-white font-rounded" dir="rtl">
+                <span className="text-xs sm:text-sm md:text-base lg:text-lg font-medium text-rose-700 font-rounded" dir="rtl">
                   شركة الابتكارات المتميزة للتجارة
                 </span>
               </div>

@@ -37,11 +37,11 @@ const Footer = () => {
   {/* Company Info - spans 2 columns */}
   <div className="md:col-span-2  ">
     <div className="flex items-center space-x-3 sm:space-x-4 mb-4 ">
-      <div className="group w-8 h-8 sm:w-9 sm:h-9 lg:w-14 lg:h-14 bg-white rounded-xl flex items-center justify-center shadow-lg hover:scale-105 transition-transform duration-300">
+      <div className="group w-9 h-9 sm:w-9 sm:h-9 lg:w-14 lg:h-14 bg-white rounded-lg sm:rounded-xl flex items-center justify-center shadow-lg hover:scale-105 transition-transform duration-300">
         <img
           src={logo}
           alt="DI Logo"
-          className="w-6 h-6 sm:w-6 sm:h-6 lg:w-12 lg:h-12 object-contain"
+          className="w-8 h-8 sm:w-6 sm:h-6 lg:w-12 lg:h-12 object-contain"
         />
       </div>
       <div className="flex flex-col leading-tight">

@@ -1,4 +1,5 @@
 import React from 'react';
+import aboutimage from '../assets/About (2).png';
 
 const About = () => {
   return (
@@ -65,13 +66,13 @@ const About = () => {
             {/* Image and Features */}
             <div className="space-y-8">
               {/* Company Image */}
-              {/* <div className="relative">
+              <div className="relative">
                 <img 
-                  src="https://images.pexels.com/photos/159298/gears-cogs-machine-machinery-159298.jpeg?auto=compress&cs=tinysrgb&w=800&h=600"
+                  src={aboutimage}
                   alt="Industrial Equipment Trading"
-                  className="w-full h-64 object-cover rounded-2xl shadow-xl"
+                  className="w-full h-full object-cover rounded-2xl shadow-xl"
                 />
-              </div> */}
+              </div>
               
               {/* Why Choose Us */}
               <div className="bg-gray-50 p-6 rounded-xl border border-gray-200">
