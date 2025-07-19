@@ -12,7 +12,7 @@ const Products = () => {
       subtitle: 'Electro-Mechanical Consumables',
       description: 'Comprehensive range of electrical components and systems for residential, commercial, and industrial applications.',
       items: [
-        'Cables & Wiring',
+        'Cables & Wires',
         'Switches & Industrial Socketes',
         'Load Centers & Circuit Breakers',
         'Lighting Solutions',

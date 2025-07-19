@@ -172,7 +172,7 @@ const Brands = () => {
                   key={`${brand.name}-${index}`}
                   className="flex-shrink-0 group cursor-pointer"
                 >
-                  <div className="w-14 h-10 sm:w-16 sm:h-10 md:w-20 md:h-10 lg:w-24 lg:h-12 xl:w-44 xl:h-32 bg-white rounded-lg md:rounded-xl transition-all duration-300 flex items-center justify-center p-0 md:p-1 border border-gray-200 hover:border-rose-200 group-hover:scale-105 group-hover:shadow-lg hover:shadow-rose-100">
+                  <div className="w-14 h-10 sm:w-16 sm:h-10 md:w-20 md:h-10 lg:w-24 lg:h-12 xl:w-28 xl:h-14 bg-white rounded-lg md:rounded-xl transition-all duration-300 flex items-center justify-center p-0 md:p-1 border border-gray-200 hover:border-rose-200 group-hover:scale-105 group-hover:shadow-lg hover:shadow-rose-100">
                     <img
                       src={brand.logo}
                       alt={brand.name}

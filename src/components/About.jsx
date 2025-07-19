@@ -21,7 +21,10 @@ const About = () => {
                 <p className="text-lg text-gray-700 leading-relaxed mb-6">
                   
                  Established in 2013 with a vision to provide comprehensive trading and supply solutions, 
-                  <strong className="text-rose-700"> Distinguished Innovations Trading Company</strong>  has grown to become a trusted name in the trade. We specialize in trading and supplying high-quality electrical and mechanical products, components, fire and safety Equpment, power tools and industrial supplies to businesses across various sectors.
+                  <strong className="text-rose-700"> Distinguished Innovations Trading Company</strong>  has grown to 
+                  become a trusted name in the trade. We specialize in
+                   trading and supplying high-quality electrical and mechanical products, components,
+                   fire and safety Tools, power tools and industrial supplies to businesses across various sectors.
 
                 </p>
                 
